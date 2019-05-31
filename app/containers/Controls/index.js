@@ -28,7 +28,7 @@ export function Controls({ onKeyDownHandler }) {
       document.removeEventListener('keydown', onKeyDownHandler, false);
   });
 
-  return <div>controls</div>;
+  return null;
 }
 
 Controls.propTypes = {

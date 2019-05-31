@@ -1,5 +1,3 @@
-// import _ from 'lodash';
-
 export const getEmptyCellsArr = playground => {
   const result = [];
   playground.forEach((row, rowIndex) => {
@@ -21,6 +19,13 @@ export const getRandomEmptyTile = playground => {
 
 /* eslint-disable no-param-reassign */
 export const addRandomTileToDraft = (playground, draft) => {
-  const [row, col] = getRandomEmptyTile(playground);
-  draft[row][col] = 2;
+  const emptyCell = getRandomEmptyTile(playground);
+
+  if (!emptyCell) {
+    return;
+  }
+
+  const [row, col] = emptyCell;
+  const value = getRandomInt(2) === 1 ? 2 : 4;
+  draft[row][col] = value;
 };
