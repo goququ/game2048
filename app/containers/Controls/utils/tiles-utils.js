@@ -1,4 +1,6 @@
-export const getEmptyCellsArr = playground => {
+import { getRandomInt } from './other';
+
+export const getEmptyTilesArr = playground => {
   const result = [];
   playground.forEach((row, rowIndex) => {
     row.forEach((tile, tileIndex) => {
@@ -8,12 +10,8 @@ export const getEmptyCellsArr = playground => {
   return result;
 };
 
-export function getRandomInt(max) {
-  return Math.floor(Math.random() * (max - 0)) + 0;
-}
-
 export const getRandomEmptyTile = playground => {
-  const emptyCells = getEmptyCellsArr(playground);
+  const emptyCells = getEmptyTilesArr(playground);
   return emptyCells[getRandomInt(emptyCells.length)];
 };
 

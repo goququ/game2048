@@ -11,8 +11,9 @@ import {
   MOVE_BOTTOM,
   ADD_TILE,
 } from './constants';
-import { addRandomTileToDraft } from './utils';
+import utils from './utils';
 
+const { addRandomTileToDraft } = utils.tilesUtils;
 export const initialState = Array(5)
   .fill('')
   .map(() => Array(5).fill(null));
