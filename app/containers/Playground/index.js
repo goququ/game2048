@@ -33,7 +33,4 @@ Playground.propTypes = {
 
 const withConnect = connect(({ playground }) => ({ playground }));
 
-export default compose(
-  withConnect,
-  memo,
-)(Playground);
+export default compose(withConnect)(Playground);

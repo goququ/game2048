@@ -10,7 +10,7 @@ import { FormattedMessage } from 'react-intl';
 import messages from './messages';
 
 import Controls from '../Controls';
-import Playground from '../Playground';
+import Playground from '../Playground/Loadable';
 
 export default function HomePage() {
   return (
